@@ -1,0 +1,5 @@
+consultas SQL 
+SELECT c.id_cliente,p.nombres, v.id_venta,v.fecha_venta,d.producto,d.cantidad,d.subtotal,v.total FROM ventas v
+INNER JOIN clientes c ON v.cliente=c.id_cliente INNER JOIN det_ventas d 
+on v.id_venta=d.venta
+INNER JOIN personas p ON c.persona=p.id_persona WHERE c.id_cliente=5 AND v.id_venta=15
